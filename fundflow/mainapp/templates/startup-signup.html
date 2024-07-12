@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/signup.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" class="form" role="form" novalidate="novalidate" method="post" action="{% url 'lender_data' %}">
+            {% csrf_token %}
+            <h2><strong>LENDER</strong> SignUp</h2>
+            <div class="form-control">
+                <label for="name">name</label>
+                <input type="text" id="name" placeholder="Enter name" name="name">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email" name="email">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" name="password">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Enter password again">
+                <small>Error Message</small>
+            </div>
+<!--            <a href="success.html" class="submit-btn">Submit</a>-->
+            <div class="submit_btn">
+                <input class="submit-btn" type="submit" name="save" value="Submit" >
+            </div>
+        </form>
+<!--        <script src="/static/js/signup.js"></script>-->
+</body>
+</html>
